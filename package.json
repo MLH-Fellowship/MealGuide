@@ -1,0 +1,40 @@
+{
+  "name": "meal-guide",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "license": "GNU General Public License v3.0",
+  "description": "This is a progressive web app designed to battle obesity in students at various university. MealGuide will remove the need to research, plan and design your diets so you don’t really have to spend time, thinking and energy for starting your fitness journey. Our application uses nutritional science to develop custom meals according to the menu at your university dinning halls that will help you reach your fitness goals.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MLH-Fellowship/MealGuide"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
