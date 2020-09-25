@@ -1,20 +1,9 @@
-/* : {
-    --primary: #34314c;
-    --secondary: #9592ad;
-    --border: #d9dee9;
-    --highlight-1: #FFAEBC;
-    --highlight-2: #A0E7E5;
-    --highlight-3: #B4F8C8;
-    --highlight-4: #FBE7C6;
-} */
-
 .highlight {
     height: 6px;
     border: 0;
-    margin: 0px 10% 0px 10%;
     background-color: #FFAEBC;
     background-image: linear-gradient(to right, #FFAEBC, #FFAEBC 25%, #A0E7E5 25%, #A0E7E5 50%, #B4F8C8 50%, #B4F8C8 75%, #FBE7C6 75%, #FBE7C6 100%, #FBE7C6 100%);
-    -webkit-background-size: 50% 100%;
-    -moz-background-size: 50% 100%;
-    background-size: 50% 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
 }

@@ -1,12 +1,12 @@
-import { IonToolbar } from '@ionic/react';
+import { IonContent } from '@ionic/react';
 import React from 'react';
 import './Highlight.css'
 
-const Highlight = () => {
+const Highlight = ({ highlightsides, highlighttop , highlightbottom}) => {
     return (
-        <IonToolbar>
-            <div className='highlight'></div>
-        </IonToolbar>
+        <IonContent>
+            <div className='highlight' style={{ marginLeft: highlightsides, marginRight: highlightsides, marginTop:highlighttop, marginBottom:highlightbottom }}></div>
+        </IonContent>
     )
 }
 

@@ -10,8 +10,8 @@ const Profile = () => {
             <SmallNavbar />
             <IonContent fullscreen>
                 <LargeNavbar />
+                <Highlight highlightsides='20px' highlighttop='50px'/>
             </IonContent>
-            <Highlight/>
         </IonPage>
     )
 }
