@@ -7,7 +7,7 @@ import Highlight from '../components/Highlight/Highlight';
 const Profile = () => {
     return (
         <IonPage>
-            <SmallNavbar />
+            {/* <SmallNavbar /> */}
             <IonContent fullscreen>
                 <LargeNavbar />
                 <Highlight highlightsides='20px' highlighttop='50px'/>

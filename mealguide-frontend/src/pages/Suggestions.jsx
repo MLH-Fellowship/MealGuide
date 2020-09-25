@@ -6,7 +6,7 @@ import LargeNavbar from '../components/Navbar/LargeNavbar';
 const Suggestions = () => {
     return (
         <IonPage>
-            <SmallNavbar />
+            {/* <SmallNavbar /> */}
             <IonContent fullscreen>
                 <LargeNavbar />
             </IonContent>

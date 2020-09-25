@@ -2,25 +2,79 @@
     float: left;
     height: 50px;
     width: 50px;
-    margin: 20px 0px 10px 10px;
+    margin: 20px 5px 10px 10px;
 }
 
 .appname {
     position: relative;
     top: 15px;
     padding-inline-start: 5px;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: 400;
 }
 
 .slogan {
     position: relative;
     float: right;
-    bottom: 15px;
-    font-size: 20px;
+    top: 15px;
+    font-size: 15px;
     padding: 0px;
+    right: 62px;
     padding-inline-start: 5px;
 }
 
 .in-line {
     display: inline-block;
+}
+
+.navbutton {
+    /* padding: 0; */
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .appname{
+        top: 20px;
+        font-size: 20px;
+        padding: 0;
+    }
+    .slogan{
+        font-size: 14px;
+        right: 0px;
+        top: 20px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+    .appname{
+        top: 20px;
+        font-size: 18px;
+        padding: 0;
+    }
+    .slogan{
+        font-size: 14px;
+        right: 8%;
+        top: 18px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+    .appname{
+        padding: 0;
+        top: 20px;
+        font-size: 18px;
+    }
+    .slogan{
+        font-size: 14px;
+        right: 8%;
+        top: 18px;
+        padding: 0;
+        margin: 0;
+    }
 }

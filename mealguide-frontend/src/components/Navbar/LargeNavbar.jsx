@@ -6,18 +6,18 @@ import './Navbar.css';
 
 const Navbar = () => {
     return (
-        <IonHeader collapse='condense'>
+        <IonHeader>
             <IonToolbar className="item-inner-custom">
                 <IonImg src={logo} className='logo' />
                 <div className='in-line'>
-                    <IonTitle className='appname' size='large'>MealGuide</IonTitle>
-                    <IonTitle className='slogan' size='small'>Be Fit, Be Free</IonTitle>
+                    <IonTitle className='appname'>MealGuide</IonTitle>
+                    <IonTitle className='slogan'>Be Fit, Be Free</IonTitle>
                 </div>
-                <IonButton fill='clear' slot='end' href='/profile'>
-                    <IonIcon color='dark' size='large' icon={personSharp} />
+                <IonButton fill='clear' slot='end' className='navbutton' href='/profile'>
+                    <IonIcon color='dark' icon={personSharp} />
                 </IonButton>
-                <IonButton fill='clear' slot='end' href='/suggestions'>
-                    <IonIcon color='dark' size='large' icon={readerOutline} />
+                <IonButton fill='clear' slot='end' className='navbutton' href='/suggestions'>
+                    <IonIcon color='dark' icon={readerOutline} />
                 </IonButton>
             </IonToolbar>
         </IonHeader>
