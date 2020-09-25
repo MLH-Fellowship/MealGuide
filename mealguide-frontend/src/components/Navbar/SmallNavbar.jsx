@@ -11,8 +11,8 @@ const Navbar = () => {
             <IonToolbar className="item-inner-custom">
                 <IonImg src={logo} className='logo' />
                 <div className='in-line'>
-                    <IonTitle className='appname' size='large'>MealGuide</IonTitle>
-                    <IonTitle className='slogan' size='small'>Be Fit, Be Free</IonTitle>
+                    <IonTitle className='appname'>MealGuide</IonTitle>
+                    <IonTitle className='slogan'>Be Fit, Be Free</IonTitle>
                 </div>
                 <IonButton fill='clear' color='dark' slot='end' href='/profile'>
                     <IonIcon size='large' icon={personSharp} />
