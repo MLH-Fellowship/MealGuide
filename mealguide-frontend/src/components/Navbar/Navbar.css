@@ -1,0 +1,25 @@
+.item-inner-custom{
+    border-width: 0px !important;
+    border-style: none !important;
+    border-color: #ffffff !important;
+}
+
+.logo{
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin: 10px 0px 10px 10px;
+}
+
+.appname{
+    position: relative;
+    top: 15px;
+    padding-inline-start: 5px;
+}
+
+.slogan{
+    position: relative;
+    float: right;
+    /* top: 15px; */
+    padding-inline-start: 5px;
+}
