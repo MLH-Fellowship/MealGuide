@@ -1,23 +1,28 @@
-.logo{
+.logo {
     float: left;
     height: 50px;
     width: 50px;
     margin: 10px 0px 10px 10px;
 }
 
-.appname{
+.appname {
     position: relative;
     top: 15px;
     padding-inline-start: 5px;
 }
 
-.slogan{
+.slogan {
     position: relative;
     float: right;
     top: 15px;
     padding-inline-start: 5px;
 }
 
-.in-line{
+.in-line {
     display: inline-block;
+}
+
+.navbutton {
+    background-color: none;
+    
 }
