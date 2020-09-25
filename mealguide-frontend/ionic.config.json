@@ -1,0 +1,7 @@
+{
+  "name": "mealguide-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
