@@ -1,0 +1,19 @@
+{
+  "name": "meal_guide_backend",
+  "version": "1.0.0",
+  "description": "Backend API for MealGuide - A service to help university students to better manage their diet plans.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "AlgoRidham",
+  "license": "GPL",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.1",
+    "nodemon": "^2.0.4"
+  }
+}
