@@ -13,11 +13,11 @@ const Navbar = () => {
                     <IonTitle className='appname' size='large'>MealGuide</IonTitle>
                     <IonTitle className='slogan' size='small'>Be Fit, Be Free</IonTitle>
                 </div>
-                <IonButton className='navbutton' slot='end' href='/profile'>
-                    <IonIcon size='large' icon={personSharp} />
+                <IonButton fill='clear' slot='end' href='/profile'>
+                    <IonIcon color='dark' size='large' icon={personSharp} />
                 </IonButton>
-                <IonButton className='navbutton' slot='end' href='/suggestions'>
-                    <IonIcon size='large' icon={readerOutline} />
+                <IonButton fill='clear' slot='end' href='/suggestions'>
+                    <IonIcon color='dark' size='large' icon={readerOutline} />
                 </IonButton>
             </IonToolbar>
         </IonHeader>

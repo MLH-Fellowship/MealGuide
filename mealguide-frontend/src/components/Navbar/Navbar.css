@@ -2,27 +2,25 @@
     float: left;
     height: 50px;
     width: 50px;
-    margin: 10px 0px 10px 10px;
+    margin: 20px 0px 10px 10px;
 }
 
 .appname {
     position: relative;
     top: 15px;
     padding-inline-start: 5px;
+    font-size: 40px;
 }
 
 .slogan {
     position: relative;
     float: right;
-    top: 15px;
+    bottom: 15px;
+    font-size: 20px;
+    padding: 0px;
     padding-inline-start: 5px;
 }
 
 .in-line {
     display: inline-block;
-}
-
-.navbutton {
-    background-color: none;
-    
 }
