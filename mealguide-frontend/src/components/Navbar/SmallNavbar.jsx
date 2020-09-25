@@ -8,11 +8,11 @@ const Navbar = () => {
     return (
         <IonHeader>
             <IonToolbar className="item-inner-custom">
-                {/* <IonItem className="item-inner-custom"> */}
-                    <IonImg src={logo}  className='logo'/>
+                <IonImg src={logo} className='logo' />
+                <div className='in-line'>
                     <IonTitle className='appname' size='large'>MealGuide</IonTitle>
                     <IonTitle className='slogan' size='small'>Be Fit, Be Free</IonTitle>
-                {/* </IonItem> */}
+                </div>
             </IonToolbar>
         </IonHeader>
     )

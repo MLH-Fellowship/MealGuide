@@ -31,6 +31,7 @@ const App = () => (
         <Route path="/profile" component={Profile} exact={true} />
         <Route path="/suggestions" component={Suggestions} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/profile" />} />
+        <Route component={() => <Redirect to='/profile'/>}/>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
