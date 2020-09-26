@@ -12,10 +12,10 @@ const Suggestions = () => {
             <IonContent fullscreen>
                 <LargeNavbar />
                 <Accordion>
-                    <AccordionCard title='Clickety clack' subtitle='Heavy' colour='pastelpink' body='Please work' eventKey='0'/>
-                    <AccordionCard title='Clickety clack' colour='pastelblue' body='Please work' eventKey='1'/>
-                    <AccordionCard title='Clickety clack' colour='pastelgreen' body='Please work' eventKey='2'/>
-                    <AccordionCard title='Clickety clack' colour='pastelyellow' body='Please work' eventKey='2'/>
+                    <AccordionCard title='Breakfast' subtitle='Heavy' colour='pastelpink' body='This is the body' eventKey='0'/>
+                    <AccordionCard title='Lunch' subtitle='Light' colour='pastelblue' body='This is the body' eventKey='1'/>
+                    <AccordionCard title='Snacks' subtitle='Heavy' colour='pastelgreen' body='This is the body' eventKey='2'/>
+                    <AccordionCard title='Dinner' subtitle='Light' colour='pastelyellow' body='This is the body' eventKey='3'/>
                 </Accordion>
             </IonContent>
         </IonPage>
