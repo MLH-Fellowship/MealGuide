@@ -1,11 +1,10 @@
-const { $where } = require('../models/userModel');
 const User = require('../models/userModel');
 
 exports.getUser = (req, res) => {
+    if(req.userReply != null)
     return res.json(req.userReply);
+    return res.json({error: "No entry found"});
 }
-
-
 
 exports.getUserCheck = (req,res,next) => {
     User.findOne({email : req.body.email})
@@ -31,6 +30,6 @@ exports.setUser = (req,res) => {
         }
         return res.json({
             user
-        })
-    })
+        });
+    });
 }

@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const userRoutes = require('./routes/userRoute');
+const collegeRoutes = require('./routes/collegeRoute');
 
 //middlewares
 app.use(bodyParser.json());
@@ -35,6 +36,7 @@ mongoose.connection.on('error', (err) => {
 
 //api endpoints or routes
 app.use('/api',userRoutes);
+app.use('/api',collegeRoutes);
 
 //app start
 app.listen(port, () => {

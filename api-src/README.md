@@ -33,11 +33,11 @@ EndPoint - /api/user/addUser
 Request Type - POST
 ~~~
 
-Json to push
+Json to push (example)
 
 ~~~
 {
-    "email": "ri.bh@gmail.com", - Required
+    "email": "ri.bh@gmail.com", - Required  -- Primary
     "firstname": "Ridham",      - Required
     "lastname": "Bhat",         - Required
     "username": "AlgoRidham",   
@@ -59,10 +59,69 @@ EndPoint - /api/user/getUser
 Request Type - POST
 ~~~
 
-Json to push
+Json to push (example)
 
 ~~~
 {
     "email": "ri.bh@gmail.com", - Required
+}
+~~~
+
+### 3. Add College
+~~~
+EndPoint - /api/college/addCollege
+Request Type - POST
+~~~
+
+Json to push (example)
+
+~~~
+{
+    "collegeName": "YMCA, Faridabad",     - Required -- Primary
+    "mealsOffered": [
+        
+            { 
+                "name": "Rajma Rice",
+                "cost": 100,
+                "weight": 200,
+                "nutrition": {
+                    "carb": 50,
+                    "protein": 20,
+                    "fat": 10
+                },
+                "type": "Veg"
+            }
+        ,
+        {
+                "name": "Chole Bhature",
+                "cost": 90,
+                "weight": 150,
+                "nutrition": {
+                    "carb": 60,
+                    "protein": 20,
+                    "fat": 30
+                },
+                "type": "Veg"
+        }
+    ],
+    "collegeLoc": {                         - Required    
+        "lat": 25.311,
+        "long": 26.112
+    }
+}
+
+~~~
+
+### 4. Get College Details
+~~~
+EndPoint - /api/college/getCollege
+Request Type - POST
+~~~
+
+Json to push (example)
+
+~~~
+{
+    "collegeName": "YMCA, Faridabad",     - Required
 }
 ~~~
