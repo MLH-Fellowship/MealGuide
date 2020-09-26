@@ -4,7 +4,9 @@ import './Highlight.css'
 
 const Highlight = ({ highlightsides, highlighttop , highlightbottom}) => {
     return (
-        <div className='highlight' style={{ marginLeft: highlightsides, marginRight: highlightsides, marginTop:highlighttop, marginBottom:highlightbottom }}></div>
+        <IonContent>
+            <div className='highlight' style={{ marginLeft: highlightsides, marginRight: highlightsides, marginTop:highlighttop, marginBottom:highlightbottom }}></div>
+        </IonContent>
     )
 }
 
