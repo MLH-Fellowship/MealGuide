@@ -2,7 +2,8 @@ import React from 'react';
 import { IonContent, IonPage } from '@ionic/react';
 // import SmallNavbar from '../components/Navbar/SmallNavbar';
 import LargeNavbar from '../components/Navbar/LargeNavbar';
-import ColouredAccordion from '../components/ColouredAccordion/ColouredAccordion';
+import AccordionCard from '../components/AccordionCard/AccordionCard';
+import Accordion from 'react-bootstrap/esm/Accordion';
 
 const Suggestions = () => {
     return (
@@ -10,7 +11,12 @@ const Suggestions = () => {
             {/* <SmallNavbar /> */}
             <IonContent fullscreen>
                 <LargeNavbar />
-                <ColouredAccordion />
+                <Accordion>
+                    <AccordionCard title='Clickety clack'  colour='pastelpink' body='Please work' eventKey='0'/>
+                    <AccordionCard title='Clickety clack' colour='pastelblue' body='Please work' eventKey='1'/>
+                    <AccordionCard title='Clickety clack' colour='pastelgreen' body='Please work' eventKey='2'/>
+                    <AccordionCard title='Clickety clack' colour='pastelyellow' body='Please work' eventKey='2'/>
+                </Accordion>
             </IonContent>
         </IonPage>
     )
