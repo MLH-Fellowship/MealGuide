@@ -1,0 +1,11 @@
+
+.userProfileImage{
+    height: 100px;
+    width: 100px;
+}
+.userProfileName{
+    font-size: 1.4em !important;
+}
+.userProfileLink{
+    background-color: #f0face;
+}
