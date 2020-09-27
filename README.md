@@ -48,7 +48,7 @@ Generate the dist files and then start server at port 3000
 * [CSS](https://www.w3schools.com/whatis/whatis_css.asp) - Front-end styling language
 * [javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Front-end code bundler
 * [React](https://reactjs.org/) - Front-end Libray
-* [Ionic}(https://ionicframework.com/) - Front-end UI library
+* [Ionic](https://ionicframework.com/) - Front-end UI library
 * [Webpack](https://webpack.js.org/) - Front-end built tool
 * [Express](https://expressjs.com/) - NodeJS Back-end server
 * [MongoDB](https://www.mongodb.com/) - Back-end Database
