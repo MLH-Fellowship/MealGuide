@@ -9,8 +9,8 @@ const UserFacts = ({ FactLableOne, FactValueOne, FactLableTwo, FactValueTwo, Fac
         <IonGrid>
             <IonRow>
                 <IonCol>
-                    <IonItem className='iteminner'>
-                        <IonLabel className='iteminner'>
+                    <IonItem>
+                        <IonLabel>
                             {FactLableOne} : {FactValueOne}
                         </IonLabel>
                     </IonItem>
