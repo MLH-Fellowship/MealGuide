@@ -1,5 +1,5 @@
 .highlight {
-    height: 6px;
+    /* height: 6px; */
     border: 0;
     background-color: #FFAEBC;
     background-image: linear-gradient(to right, #FFAEBC, #FFAEBC 25%, #A0E7E5 25%, #A0E7E5 50%, #B4F8C8 50%, #B4F8C8 75%, #FBE7C6 75%, #FBE7C6 100%, #FBE7C6 100%);

@@ -10,7 +10,7 @@ const Meals = () => {
             <IonContent fullscreen>
                 <LargeNavbar />
                 <h3 style={{marginLeft:'25px', marginTop:'20px'}}>Breakfast</h3>
-                <Highlight highlightsides='20px'/>
+                <Highlight highlightsides='20px' height='6px'/>
                 <MealTable />
             </IonContent>
         </IonPage>
