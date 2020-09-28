@@ -62,6 +62,7 @@ var userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    //Veg or Non Veg or Any
     preference: {
         type: String,
         required: true

@@ -6,7 +6,7 @@ To battle obesity in students at various university, MealGuide will remove the n
 
 ## How to run backend:
 
-### Step 1: 
+### Step 1:
 Install Node.js and MongoDB on your system.
 
 ### Step 2:
@@ -33,23 +33,20 @@ EndPoint - /api/user/addUser
 Request Type - POST
 ~~~
 
-Json to push (example)
+Example in JavaScript
 
 ~~~
-{
-    "email": "ri.bh@gmail.com", - Required  -- Primary
-    "firstname": "Ridham",      - Required
-    "lastname": "Bhat",         - Required
-    "username": "AlgoRidham",   
-    "points": 5,                - Required
-    "weight": 65,               - Required
-    "height": 180,              - Required
-    "age": 20,                  - Required
-    "gender": "Male",           - Required
-    "college": "YMCA",          - Required
-    "preference": "Veg",        - Required
-    "mealsPerDay": 3,           - Required
-    "goal": "Maintain"          - Required
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var xhr = new XMLHttpRequest();
+xhr.open("POST", "http://localhost:8000/api/user/getUser", true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    //PUT DUMMY DATA HERE
+}));
+
+xhr.onload = function() {
+  var data = JSON.parse(this.responseText);
+  console.log(data);
 }
 ~~~
 
@@ -59,11 +56,20 @@ EndPoint - /api/user/getUser
 Request Type - POST
 ~~~
 
-Json to push (example)
+Example in JavaScript
 
 ~~~
-{
-    "email": "ri.bh@gmail.com", - Required
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var xhr = new XMLHttpRequest();
+xhr.open("POST", "http://localhost:8000/api/user/getUser", true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    email: 'ridham.bhat@gmail.com'
+}));
+
+xhr.onload = function() {
+  var data = JSON.parse(this.responseText);
+  console.log(data);
 }
 ~~~
 
@@ -73,43 +79,21 @@ EndPoint - /api/college/addCollege
 Request Type - POST
 ~~~
 
-Json to push (example)
+Example in JavaScript
 
 ~~~
-{
-    "collegeName": "YMCA, Faridabad",     - Required -- Primary
-    "mealsOffered": [
-        
-            { 
-                "name": "Rajma Rice",
-                "cost": 100,
-                "weight": 200,
-                "nutrition": {
-                    "carb": 50,
-                    "protein": 20,
-                    "fat": 10
-                },
-                "type": "Veg"
-            }
-        ,
-        {
-                "name": "Chole Bhature",
-                "cost": 90,
-                "weight": 150,
-                "nutrition": {
-                    "carb": 60,
-                    "protein": 20,
-                    "fat": 30
-                },
-                "type": "Veg"
-        }
-    ],
-    "collegeLoc": {                         - Required    
-        "lat": 25.311,
-        "long": 26.112
-    }
-}
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var xhr = new XMLHttpRequest();
+xhr.open("POST", "http://localhost:8000/api/college/addCollege", true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    //ENTER DUMMY DATA HERE
+}));
 
+xhr.onload = function() {
+  var data = JSON.parse(this.responseText);
+  console.log(data);
+}
 ~~~
 
 ### 4. Get College Details
@@ -118,10 +102,42 @@ EndPoint - /api/college/getCollege
 Request Type - POST
 ~~~
 
-Json to push (example)
+Example in JavaScript
 
 ~~~
-{
-    "collegeName": "YMCA, Faridabad",     - Required
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var xhr = new XMLHttpRequest();
+xhr.open("POST", "http://localhost:8000/api/college/getCollege", true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    collegeName : 'Harvard University'
+}));
+
+xhr.onload = function() {
+  var data = JSON.parse(this.responseText);
+  console.log(data);
+}
+~~~
+
+### 5. Get Meal Recommendations
+~~~
+EndPoint - /api/user/getRecommendations
+Request Type - POST
+~~~
+
+Example in JavaScript
+
+~~~
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var xhr = new XMLHttpRequest();
+xhr.open("POST", "http://localhost:8000/api/user/getRecommendations", true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    email : 'ridham.bhat@gmail.com'
+}));
+
+xhr.onload = function() {
+  var data = JSON.parse(this.responseText);
+  console.log(data);
 }
 ~~~
