@@ -33,3 +33,16 @@ exports.setUser = (req,res) => {
         });
     });
 }
+
+exports.deleteAllUsers = (req,res) => {
+    User.remove({},(err,obj)=>{
+        if(err){
+            return res.status(400).json({
+                error: "Failed to delete Users"
+            })
+        }
+        return res.json({
+            message: "Users deleted successfully"
+        })
+    })
+}

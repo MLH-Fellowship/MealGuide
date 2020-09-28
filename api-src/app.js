@@ -8,6 +8,8 @@ const cors = require("cors");
 
 const userRoutes = require('./routes/userRoute');
 const collegeRoutes = require('./routes/collegeRoute');
+const recommendationRoute = require('./routes/recommendationRoute');
+
 
 //middlewares
 app.use(bodyParser.json());
@@ -37,6 +39,39 @@ mongoose.connection.on('error', (err) => {
 //api endpoints or routes
 app.use('/api',userRoutes);
 app.use('/api',collegeRoutes);
+app.use('/api',recommendationRoute);
+
+// //passport - google sign in
+
+// const passport = require("passport");
+// app.use(passport.initialize());
+// app.use(passport.session());
+// const gStrategy = require("passport-google-oauth20");
+// var keys = require('./ids');
+
+// passport.serializeUser(function (user, cb){
+//     cb(null, obj);
+// });
+
+// passport.deserializeUser(function(obj, cb){
+//     cb(null, obj);
+// });
+
+// passport.use(new gStrategy({
+//         clientID: keys.clientid,
+//         clientSecret: keys.clientSecret,
+//         callbackURL : keys.callbackURL
+//     },
+//     function(accessToken, refreshToken, profile, done) {
+//         done(null, {});
+//     }
+// ));
+
+// app.get('/auth/google', passport.authenticate('google',{scope:['profile']}));
+
+
+
+
 
 //app start
 app.listen(port, () => {

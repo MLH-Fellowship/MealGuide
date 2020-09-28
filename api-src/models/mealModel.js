@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 var mealSchema = new mongoose.Schema({
+    unique: false,
     name: {
         type: String,
         required: true,
-        trim: true,
-        unique: true
+        trim: true
     },
     //Cost will be always entered in local currency of the university
     cost: {
@@ -30,14 +30,18 @@ var mealSchema = new mongoose.Schema({
         fat: {
             required: true,
             type: Number
-        }
+        },
         //Can add more nutrients in AddOns
     },
     type: {
-        //Veg or Non-Veg
+        //Veg or Non Veg or Any
         type: String,
         required: true
-    }
+    },
+    mealTime: [
+        //Breakfast, Lunch, Snack or Dinner
+        {type: String}
+    ]
 
 });
 
