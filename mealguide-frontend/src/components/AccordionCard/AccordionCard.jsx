@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import { IonCard, IonCardHeader } from '@ionic/react';
-
+import List from '../List/List';
 
 const AccordionCard = ({ title, subtitle, body, eventKey, colour }) => {
     return (
@@ -15,7 +15,7 @@ const AccordionCard = ({ title, subtitle, body, eventKey, colour }) => {
                 <h6 style={{margin:'0px'}}>{subtitle}</h6>
             </Accordion.Toggle>
             <Accordion.Collapse eventKey={eventKey}>
-                <Card.Body>{body}</Card.Body>
+                <Card.Body><List dish='bagel'/></Card.Body>
             </Accordion.Collapse>
         </IonCard>
     )
