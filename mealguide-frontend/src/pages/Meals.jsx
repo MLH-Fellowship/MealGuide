@@ -1,11 +1,17 @@
-import { IonContent, IonPage } from '@ionic/react';
 import React from 'react'
+import { IonContent, IonPage } from '@ionic/react';
+import LargeNavbar from '../components/Navbar/LargeNavbar';
+import Highlight from '../components/Highlight/Highlight';
+import MealTable from '../components/MealTable/MealTable';
 
 const Meals = () => {
     return (
         <IonPage>
             <IonContent fullscreen>
-                <div>Hi from meals</div>
+                <LargeNavbar />
+                <h3 style={{marginLeft:'25px', marginTop:'20px'}}>Breakfast</h3>
+                <Highlight highlightsides='20px'/>
+                <MealTable />
             </IonContent>
         </IonPage>
     )
