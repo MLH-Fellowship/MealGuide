@@ -1,9 +1,11 @@
 .highlight {
-    /* height: 6px; */
+    padding:'0';
+    margin:'0';
+    /* height: 4px;
     border: 0;
     background-color: #FFAEBC;
     background-image: linear-gradient(to right, #FFAEBC, #FFAEBC 25%, #A0E7E5 25%, #A0E7E5 50%, #B4F8C8 50%, #B4F8C8 75%, #FBE7C6 75%, #FBE7C6 100%, #FBE7C6 100%);
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
-    background-size: 100%;
+    background-size: 100%; */
 }
