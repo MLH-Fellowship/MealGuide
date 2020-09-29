@@ -5,7 +5,6 @@ import Highlight from '../Highlight/Highlight';
 // import './MealTable.css'
 
 const MealTable = ({ mealsOffered }) => {
-    console.log(mealsOffered)
     return !mealsOffered.length ?
         <h1>No Meals Found</h1> :
         (<>
@@ -22,8 +21,8 @@ const MealTable = ({ mealsOffered }) => {
                 <tbody>
                     {
                         mealsOffered.map((user, i) => {
-                            return (
-                                <>
+                            if (mealsOffered[i].mealTime === window.location.pathname.split('/meals/')[1]) {
+                                return (<>
                                     <tr>
                                         <td>{mealsOffered[i].name}</td>
                                         <td>{mealsOffered[i].nutrition.protein}</td>
@@ -38,12 +37,14 @@ const MealTable = ({ mealsOffered }) => {
                                         <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
                                         <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
                                     </tr>
-                                </>)
+                                </>
+                                )
+                            }
                         })
                     }
                 </tbody>
             </Table> </>
         )
-}
+    }
 
 export default MealTable;
