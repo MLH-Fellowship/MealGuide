@@ -6,10 +6,10 @@ import { IonCard, IonCardHeader } from '@ionic/react';
 import { useHistory } from "react-router-dom";
 import './AccordionCard.css'
 
-function AccordionCard({ title, subtitle, body, eventKey, colour, mealTime }) {
+function AccordionCard({ title, subtitle, body, eventKey, colour, mealTime, id }) {
     const history = useHistory();
     const routeChange = () => {
-        let path = '/meals';
+        let path = `/meals/${id}`;
         history.push(path);
     }
     return (
