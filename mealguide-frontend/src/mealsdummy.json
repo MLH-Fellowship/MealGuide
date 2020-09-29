@@ -74,6 +74,30 @@
                 "mealTime": "Lunch"
             },
             {
+                "name": "Whole Grain Muffin",
+                "cost": 20,
+                "weight": 110,
+                "nutrition": {
+                    "carb": 0.8,
+                    "protein": 0.1,
+                    "fat": 0.2
+                },
+                "type": "Veg",
+                "mealTime": "Snacks"
+            },
+            {
+                "name": "Bananas",
+                "cost": 1,
+                "weight": 120,
+                "nutrition": {
+                    "carb": 35,
+                    "protein": 1.6,
+                    "fat": 0.5
+                },
+                "type": "Veg",
+                "mealTime": "Snacks"
+            },
+            {
                 "name": "Steamed Broccoli",
                 "cost": 20,
                 "weight": 110,
