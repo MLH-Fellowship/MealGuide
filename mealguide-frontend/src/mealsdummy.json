@@ -1,44 +1,3 @@
- ## User Dummy Json
-
- ~~~
-{
-    "email": "harsh.vardhan@gmail.com",
-    "firstname": "Harsh",
-    "lastname": "Vardhan",
-    "username": "CallmeHarsh",
-    "points": 0,
-    "weight": 65,
-    "height": 180,
-    "age": 20,
-    "gender": "Male",
-    "college": "Harvard University",
-    "preference": "Non Veg",
-    "mealsPerDay": 3,
-    "goal": "Maintain"
-}
- ~~~
-
- ~~~
- {
-    "email": "utkarsh.anand@gmail.com",
-    "firstname": "Utkarsh",
-    "lastname": "Anand",
-    "username": "Anand aa gya",
-    "points": 0,
-    "weight": 70,
-    "height": 183,
-    "age": 20,
-    "gender": "Male",
-    "college": "Harvard University",
-    "preference": "Veg",
-    "mealsPerDay": 3,
-    "goal": "Maintain"
-}
- ~~~
-
- ## College Dummy Json
-
-~~~
 {
     "collegeName": "Harvard University",
     "mealsOffered": [
@@ -115,6 +74,30 @@
                 "mealTime": "Lunch"
             },
             {
+                "name": "Whole Grain Muffin",
+                "cost": 20,
+                "weight": 110,
+                "nutrition": {
+                    "carb": 0.8,
+                    "protein": 0.1,
+                    "fat": 0.2
+                },
+                "type": "Veg",
+                "mealTime": "Snacks"
+            },
+            {
+                "name": "Bananas",
+                "cost": 1,
+                "weight": 120,
+                "nutrition": {
+                    "carb": 35,
+                    "protein": 1.6,
+                    "fat": 0.5
+                },
+                "type": "Veg",
+                "mealTime": "Snacks"
+            },
+            {
                 "name": "Steamed Broccoli",
                 "cost": 20,
                 "weight": 110,
@@ -156,5 +139,3 @@
         "long": -71.1167
     }
 }
-
-~~~
