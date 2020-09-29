@@ -8,3 +8,13 @@
     max-width: 210px;
     padding: 10px;
 }
+
+.signinLink{
+    text-decoration: none;
+    color: black;
+}
+
+.signinLink:hover{
+    text-decoration: none;
+    color: black;
+}
