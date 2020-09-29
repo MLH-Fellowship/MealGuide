@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table'
 import Highlight from '../Highlight/Highlight';
 // import './MealTable.css'
 
-const MealTable = () => {
+const MealTable = ({}) => {
     return (
         <Table responsive hover borderless style={{ marginLeft: '20px' }}>
             <thead>
