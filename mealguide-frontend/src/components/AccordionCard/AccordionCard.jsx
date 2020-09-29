@@ -4,6 +4,7 @@ import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import { IonCard, IonCardHeader } from '@ionic/react';
 import { useHistory } from "react-router-dom";
+import './AccordionCard.css'
 
 function AccordionCard({ title, subtitle, body, eventKey, colour, mealTime }) {
     const history = useHistory();
@@ -12,9 +13,9 @@ function AccordionCard({ title, subtitle, body, eventKey, colour, mealTime }) {
         history.push(path);
     }
     return (
-        <IonCard color={colour}
+        <IonCard color={colour} className='opac'
             style={{
-                margin: '20px', border: 'none', boxShadow: 'none', opacity: '60%'
+                margin: '20px', border: 'none', boxShadow: 'none'
             }} button onClick={routeChange} >
             <Accordion.Toggle as={Card.Header} style={{ backgroundColor: 'transparent', borderBottom: 'none' }} eventKey={eventKey}>
                 <h4 style={{ margin: '0px' }}>{title}</h4>
