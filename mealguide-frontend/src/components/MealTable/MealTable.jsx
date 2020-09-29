@@ -45,6 +45,6 @@ const MealTable = ({ mealsOffered }) => {
                 </tbody>
             </Table> </>
         )
-    }
+}
 
 export default MealTable;
