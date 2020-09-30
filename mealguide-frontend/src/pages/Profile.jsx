@@ -8,25 +8,32 @@ import Slider from '../components/Slider/Slider';
 import SectionHeader from '../components/SectionHeader/SectionHeader';
 import UserFact from '../components/UserFact/UserFact';
 import UserFacts from '../components/UserFacts/UserFacts';
-
+import users from '../usersdummy.json';
+import { square } from 'ionicons/icons';
+console.log(users)
+console.log(Math.pow((users.height / 100),2));
+function calWeight(weight, height){
+    const heightM = Math.pow((height / 100),2);
+    return parseFloat(weight / heightM).toFixed(2)
+}
 const Profile = () => {
     return (
         <IonPage>
             {/* <SmallNavbar /> */}
             <IonContent fullscreen>
                 <LargeNavbar />
-                <Avatar />
-                <UserFact FactLabel="Points" FactValue="36 meals followed till date" />
+                <Avatar username={users.firstname + " " + users.lastname}/>
+                <UserFact FactLabel="Points" FactValue={users.points + " meals followed till date"}/>
                 <Highlight highlightsides='20px' highlighttop='0' height='6px'/>
-                <UserFacts FactLableOne="Weight" FactValueOne="55 kg" FactLableTwo="Height"FactValueTwo="152 cm" FactLableThree="BMI" FactValueThree="20.24"/>
+                <UserFacts FactLableOne="Weight" FactValueOne={users.weight} FactLableTwo="Height" FactValueTwo={users.height} FactLableThree="BMI" FactValueThree={calWeight(users.weight, users.height)} />
                 <Highlight highlightsides='20px' highlighttop='0' height='6px'/>
-                <UserFacts FactLableOne="Age" FactValueOne="24" FactLableTwo="Gender"FactValueTwo="Female" FactLableThree="Preference" FactValueThree="Vegan"/>
+                <UserFacts FactLableOne="Age" FactValueOne={users.age} FactLableTwo="Gender" FactValueTwo={users.gender} FactLableThree="Preference" FactValueThree={users.preference}/>
                 <Highlight highlightsides='20px' highlighttop='0' height='6px'/>
-                <UserFact FactLabel="College" FactValue="Harward University"/>
+                <UserFact FactLabel="College" FactValue={users.college}/>
                 <Highlight highlightsides='20px' highlighttop='0' height='6px'/>
-                <UserFact FactLabel="No of Meals per day:" FactValue="Three" />
+                <UserFact FactLabel="No of Meals per day:" FactValue={users.mealsPerDay} />
                 <Highlight highlightsides='20px' highlighttop='0' height='6px'/>
-                <UserFact FactLabel="Health Goal" FactValue="Maintain Weight" />
+                <UserFact FactLabel="Health Goal" FactValue={users.goal} />
                 <Highlight highlightsides='20px' highlighttop='0' height='6px'/>
                 <SectionHeader SectionTitle="Specifications:"/>
                 <Slider sliderTitle='Carbohydrates:' sliderRangeMin='20' SliderRangeMax='2000' sliderColor="danger"/>
