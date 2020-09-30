@@ -1,0 +1,15 @@
+{
+    "email": "harsh.vardhan@gmail.com",
+    "firstname": "Harsh",
+    "lastname": "Vardhan",
+    "username": "CallmeHarsh",
+    "points": 0,
+    "weight": 65,
+    "height": 180,
+    "age": 20,
+    "gender": "Male",
+    "college": "Harvard University",
+    "preference": "Non Veg",
+    "mealsPerDay": 3,
+    "goal": "Maintain"
+}
