@@ -28,8 +28,9 @@ exports.makeRecommendation = (req, res, next) => {
             var cpg = meal.nutrition.carb/meal.weight;
             var fpg = meal.nutrition.fat/meal.weight;
             var ppg = meal.nutrition.protein/meal.weight;
-            console.log(cpg+" "+fpg+ " " + ppg);
+            //console.log(cpg+" "+fpg+ " " + ppg);
             //calculations
+            
             if(better)
             breakfast = meal;
         }
