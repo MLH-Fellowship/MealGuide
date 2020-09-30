@@ -9,7 +9,7 @@ const SigninButton = () => {
         <IonChip style={{backgroundColor:'#A0E7E5'}} class="center SigninButton">
             <IonIcon color='textgreen' icon={logoGoogle}/>
             <IonLabel color='textgreen'>
-                <a class="signinLink" href="/auth/google">
+                <a class="signinLink" href="/suggestions">
                     SIGN IN WITH GOOGLE
                 </a>
             </IonLabel>
