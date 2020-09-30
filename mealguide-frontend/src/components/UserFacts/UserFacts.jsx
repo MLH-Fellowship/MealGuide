@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form'
 import { IonGrid, IonRow, IonCol, IonLabel, IonNote, IonItem } from '@ionic/react';
-
+import './UserFacts.css'
 
 const UserFacts = ({ FactLableOne, FactValueOne, FactLableTwo, FactValueTwo, FactLableThree, FactValueThree}) => {
     return (
@@ -16,15 +16,15 @@ const UserFacts = ({ FactLableOne, FactValueOne, FactLableTwo, FactValueTwo, Fac
                     </IonItem>
                 </IonCol>
                 <IonCol>
-                    <IonItem>
-                        <IonLabel>
+                    <IonItem className='iteminner'>
+                        <IonLabel className='iteminner'>
                             {FactLableTwo} : {FactValueTwo}
                         </IonLabel>
                     </IonItem>
                 </IonCol>
                 <IonCol>
-                    <IonItem>
-                        <IonLabel>
+                    <IonItem className='iteminner'>
+                        <IonLabel className='iteminner'>
                             {FactLableThree} : {FactValueThree}
                         </IonLabel>
                     </IonItem>
