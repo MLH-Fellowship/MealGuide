@@ -1,0 +1,9 @@
+.item-inner, .noborder{
+    /* border-width: 2px;
+    border-style: none;
+    border-color: red; */
+    border: 0px solid #ffffff;
+    border-bottom: none;
+    /* all: unset; */
+    /* border-bottom: 0px; */
+}

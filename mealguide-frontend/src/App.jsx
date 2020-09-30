@@ -4,6 +4,8 @@ import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Profile from './pages/Profile';
 import Suggestions from './pages/Suggestions';
+import Meals from './pages/Meals';
+import Index from './pages/Index';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -24,14 +26,16 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const App = () => (
+const App = ({id}) => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+        <Route path="/index" component={Index} exact={true} />
         <Route path="/profile" component={Profile} exact={true} />
         <Route path="/suggestions" component={Suggestions} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/profile" />} />
-        <Route component={() => <Redirect to='/profile'/>}/>
+        <Route path='/meals/:id' component={Meals} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/index" />} />
+        <Route component={() => <Redirect to='/index'/>}/>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

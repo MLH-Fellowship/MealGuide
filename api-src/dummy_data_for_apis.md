@@ -67,10 +67,9 @@
 ~~~
  
  ## College Dummy Json to Push To Server
-
 ~~~
 {
-    "collegeName": "Harvard University",   
+    "collegeName": "Harvard University",
     "mealsOffered": [
             {
                 "name": "Hard Boiled Eggs",
@@ -181,7 +180,7 @@
                 "mealTime": "Dinner"
             }
     ],
-    "collegeLoc": {                       
+    "collegeLoc": {
         "lat": 42.3770,
         "long": -71.1167
     }

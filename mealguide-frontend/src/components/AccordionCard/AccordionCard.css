@@ -1,0 +1,7 @@
+.opac{
+    opacity: 0.6;
+}
+
+.opac:hover{
+    opacity: 1.0;
+}
