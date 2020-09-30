@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const cheerio = require('cheerio');
 const fs = require("fs")
 const mongoose = require("mongoose");
@@ -30,7 +32,10 @@ app.use(function (err, req, res, next) {
 const port = process.env.PORT||8000;
 
 //db connect
-mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/mealguidedb",{
+mongoose.connect(process.env.MONGODB_URI ||
+    process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL ||
+    "mongodb://127.0.0.1:27017/mealguidedb",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
