@@ -11,7 +11,7 @@ const Profile = () => {
     return (
         <IonPage>
             <IonContent fullscreen>
-                <Jumbotron style={{height:"100vh", display:"flex", alignItems:"center", marginBottom:"0"}}>
+                <Jumbotron style={{height:"100vh", display:"flex", alignItems:"center", marginBottom:"0", backgroundColor:"white"}}>
                     <Container>
                         <HeaderLogo heading="MealGuide" tagline="Be Fit, Be Free"/>
                         <Highlight highlightsides='20%' highlighttop='0' height='6px'/>
