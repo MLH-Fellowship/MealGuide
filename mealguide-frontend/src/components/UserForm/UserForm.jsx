@@ -36,11 +36,11 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         placeHolder = "Please enter your full name."
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please enter a valid name."
-                        helpText = "Each person's name is really speacial."
+                        helpText = "Each person's name is really special."
                         icon = {personOutline}
                     />
 					<FormInput
-                        name = "Weight" 
+                        name = "Weight"
                         Value={users.weight}
                         Type = "number"
                         placeHolder = "Please Enter your weight in kilograms."
@@ -51,7 +51,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     />
                     <FormInput
                         name = "Height"
-                        Value={users.height} 
+                        Value={users.height}
                         Type = "number"
                         placeHolder = "Please enter your Height in cm."
                         validFeedback = "Looks good!"
@@ -60,7 +60,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         icon = {bodyOutline}
                     />
                     <FormInput
-                        name = "Age" 
+                        name = "Age"
                         Value={users.age}
                         Type = "number"
                         placeHolder = "Please enter your age."
@@ -71,8 +71,8 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     />
                     <FormSelect
                         name = "Gender"
-                        Value={users.gender} 
-                        Options = {["Male", "Female", "Non-Binary"]} 
+                        Value={users.gender}
+                        Options = {["Male", "Female", "Non-Binary"]}
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please enger a valid gender."
                         helpText = "Each gender have different caloric requirements."
@@ -80,7 +80,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     />
                     <FormInput
                         name = "Meals"
-                        Value={users.mealsPerDay}  
+                        Value={users.mealsPerDay}
                         Type = "number"
                         placeHolder = "How many meals do you eat per day?"
                         validFeedback = "Looks good!"
@@ -89,18 +89,18 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         icon = {fastFoodOutline}
                     />
                     <FormSelect
-                        name = "Preference" 
+                        name = "Preference"
                         Value = {users.preference}
-                        Options = {["Regular", "Vegetarian", "Vegan", "Halal", "Kosher"]} 
+                        Options = {["Non-Vegetarian", "Vegetarian", "Vegan", "Halal", "Kosher"]}
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please select a valid option."
                         helpText = "Please let us know what are your dietary preference."
                         icon = {restaurantOutline}
                     />
                     <FormSelect
-                        name = "College" 
+                        name = "College"
                         Value={users.college}
-                        Options = {["Harward University"]} 
+                        Options = {["Harvard University"]}
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please select a valid option."
                         helpText = "Where do you study?"
@@ -108,20 +108,20 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     />
                     <FormSelect
                         name = "Goal"
-                        Value = {users.goal} 
-                        Options = {["Maintain Weight", "Gain Weight", "Lose Weight"]} 
+                        Value = {users.goal}
+                        Options = {["Maintain Weight", "Gain Weight", "Lose Weight"]}
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please select a valid option."
                         helpText = "Please let us know what are your fitness goal."
                         icon = {bicycleOutline}
                     />
 					<InputGroup class="form__buttons" style={{ display: "flex", flexDirection: "row", alignItems: "flex-end", justifyContent: "flex-end"}}>
-                        <Button variant="outline-dark"  onClick={routeChange} href='/profile' style={{paddingLeft:"10px", marginLeft:"10px"}}>Back</Button>
-						<Button variant="danger" type="reset" name="reset" id="reset" style={{paddingLeft:"10px",marginLeft:"10px"}}>Reset</Button>
-						<Button variant="success" type="submit" name="register" id="register" style={{paddingLeft:"10px",marginLeft:"10px"}}>Update</Button>
+                        <Button variant="outline-dark"  onClick={routeChange} href='/profile' style={{paddingLeft:"10px", marginLeft:"10px", marginBottom:'10px'}}>Back</Button>
+						<Button variant="danger" type="reset" name="reset" id="reset" style={{paddingLeft:"10px",marginLeft:"10px", marginBottom:'10px'}}>Reset</Button>
+						<Button variant="success" type="submit" name="register" id="register" style={{paddingLeft:"10px",marginLeft:"10px", marginBottom:'10px'}}>Update</Button>
 					</InputGroup>
 				</Form>
-			</div>	
+			</div>
 		</div>
     )
 }

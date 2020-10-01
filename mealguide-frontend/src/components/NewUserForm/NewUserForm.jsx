@@ -32,7 +32,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
 				</h3>
 				<Form action="/suggestions">
 					<FormInput
-                        name = "Weight" 
+                        name = "Weight"
                         Value=""
                         Type = "number"
                         placeHolder = "Please Enter your weight in kilograms."
@@ -62,18 +62,18 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         icon = {fastFoodOutline}
                     />
                     <FormSelect
-                        name = "Preference" 
+                        name = "Preference"
                         Value = ""
-                        Options = {["Regular", "Vegetarian", "Vegan", "Halal", "Kosher"]} 
+                        Options = {["Non-Vegetarian", "Vegetarian", "Vegan", "Halal", "Kosher"]}
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please select a valid option."
                         helpText = "Please let us know what are your dietary preference."
                         icon = {restaurantOutline}
                     />
                     <FormSelect
-                        name = "College" 
+                        name = "College"
                         Value=""
-                        Options = {["Harward University"]} 
+                        Options = {["Harvard University"]}
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please select a valid option."
                         helpText = "Where do you study?"
@@ -82,19 +82,19 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     <FormSelect
                         name = "Goal"
                         Value = ""
-                        Options = {["Maintain Weight", "Gain Weight", "Lose Weight"]} 
+                        Options = {["Maintain Weight", "Gain Weight", "Lose Weight"]}
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please select a valid option."
                         helpText = "Please let us know what are your fitness goal."
                         icon = {bicycleOutline}
                     />
 					<InputGroup class="form__buttons" style={{ display: "flex", flexDirection: "row", alignItems: "flex-end", justifyContent: "flex-end"}}>
-                        <Button variant="outline-dark"  onClick={routeChange} href='/index' style={{paddingLeft:"10px", marginLeft:"10px"}}>Back</Button>
-						<Button variant="danger" type="reset" name="reset" id="reset" style={{paddingLeft:"10px",marginLeft:"10px"}}>Reset</Button>
-						<Button variant="success" type="submit" name="register" id="register" style={{paddingLeft:"10px",marginLeft:"10px"}}>Save</Button>
+                        <Button variant="outline-dark"  onClick={routeChange} href='/index' style={{paddingLeft:"10px", marginLeft:"10px", marginBottom: '10px'}}>Back</Button>
+						<Button variant="danger" type="reset" name="reset" id="reset" style={{paddingLeft:"10px",marginLeft:"10px", marginBottom: '10px'}}>Reset</Button>
+						<Button variant="success" type="submit" name="register" id="register" style={{paddingLeft:"10px",marginLeft:"10px", marginBottom: '10px'}}>Save</Button>
 					</InputGroup>
 				</Form>
-			</div>	
+			</div>
 		</div>
     )
 }

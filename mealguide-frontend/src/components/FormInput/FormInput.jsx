@@ -7,7 +7,7 @@ import './FormInput.css'
 
 const FormInput = ({name, Type, placeHolder, validFeedback, invalideFeedback, helpText, Value, icon}) => {
     return (
-        <Form.Group id={"form__" + name} class="form-group">
+        <Form.Group id={"form__" + name} class="form-group" style={{marginTop:'20px'}}>
             <Form.Label for={name} class="form__label sr-only sr-only-focusable">
                 {name}:
             </Form.Label>
