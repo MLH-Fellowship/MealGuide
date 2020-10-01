@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {componentDidMount, useState} from 'react';
 import { IonContent, IonPage, IonLabel } from '@ionic/react';
 // import SmallNavbar from '../components/Navbar/SmallNavbar';
 import LargeNavbar from '../components/Navbar/LargeNavbar';
@@ -8,21 +8,19 @@ import Slider from '../components/Slider/Slider';
 import SectionHeader from '../components/SectionHeader/SectionHeader';
 import UserFact from '../components/UserFact/UserFact';
 import UserFacts from '../components/UserFacts/UserFacts';
-import users from '../usersdummy.json';
-import { square } from 'ionicons/icons';
-console.log(users)
-console.log(Math.pow((users.height / 100),2));
+import axios from 'axios';
 function calWeight(weight, height){
     const heightM = Math.pow((height / 100),2);
     return parseFloat(weight / heightM).toFixed(2)
 }
 const Profile = () => {
+    const users = JSON.parse(localStorage.getItem('users')) || []
     return (
         <IonPage>
             {/* <SmallNavbar /> */}
             <IonContent fullscreen>
                 <LargeNavbar />
-                <Avatar username={users.firstname + " " + users.lastname}/>
+                <Avatar username={users.firstname + " " + users.lastname} imageURL={users.imageURL}/>
                 <UserFact FactLabel="Points" FactValue={users.points + " meals followed till date"}/>
                 <Highlight highlightsides='20px' highlighttop='0' height='6px'/>
                 <UserFacts FactLableOne="Weight" FactValueOne={users.weight} FactLableTwo="Height" FactValueTwo={users.height} FactLableThree="BMI" FactValueThree={calWeight(users.weight, users.height)} />
@@ -36,9 +34,9 @@ const Profile = () => {
                 <UserFact FactLabel="Health Goal" FactValue={users.goal} />
                 <Highlight highlightsides='20px' highlighttop='0' height='6px'/>
                 <SectionHeader SectionTitle="Specifications:"/>
-                <Slider sliderTitle='Carbohydrates:' sliderRangeMin='20' SliderRangeMax='2000' sliderColor="danger"/>
-                <Slider sliderTitle='Proteins:' sliderRangeMin='20' SliderRangeMax='2000' sliderColor="secondary"/>
-                <Slider sliderTitle='Fats:' sliderRangeMin='20' SliderRangeMax='2000' sliderColor="success"/>
+                <Slider sliderTitle='Carbohydrates:' sliderRangeMin='50' defaultValue={users.nutrient.carb} SliderRangeMax='2000' sliderColor="danger"/>
+                <Slider sliderTitle='Proteins:' sliderRangeMin={(0.5*users.weight)*4} SliderRangeMax={(1.8*users.weight)*4}   defaultValue={users.nutrient.protein} sliderColor="secondary"/>
+                <Slider sliderTitle='Fats:' sliderRangeMin='50' SliderRangeMax='2000' defaultValue={users.nutrient.fat} sliderColor="success"/>
 
             </IonContent>
         </IonPage>
