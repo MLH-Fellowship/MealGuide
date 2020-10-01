@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup'
@@ -8,8 +9,7 @@ import FormSelect from '../FormSelect/FormSelect';
 import { useHistory } from "react-router-dom";
 import {personOutline, barbellOutline, bodyOutline, walkOutline, maleFemaleOutline, fastFoodOutline, restaurantOutline, bicycleOutline, bookOutline} from "ionicons/icons"
 import './UserForm.css'
-import users from '../../usersdummy.json';
-
+const users = JSON.parse(localStorage.getItem('users')) || []
 function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
     const history = useHistory();
     const routeChange = () => {
@@ -28,7 +28,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
     return (
         <div class="page__section row align-items-center section__login " data-nav="Login" id="section__register">
 			<div class="login__form col-md-6 offset-md-3">
-				<Form action="/profile">
+				<Form name="editProfileForm" method="post" action="https://mealguide.herokuapp.com/api/user/addUser">
                     <FormInput
                         name = "Name"
                         Value={users.firstname + " " + users.lastname}
@@ -87,16 +87,6 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         invalideFeedback = "Please enger a valid gender."
                         helpText = "Each gender have different caloric requirements."
                         icon = {maleFemaleOutline}
-                    />
-                    <FormInput
-                        name = "Meals"
-                        Value={users.mealsPerDay}
-                        Type = "number"
-                        placeHolder = "How many meals do you eat per day?"
-                        validFeedback = "Looks good!"
-                        invalideFeedback = "Please enter a valid no."
-                        helpText = "This will be used to suggest proper dishes in each meals."
-                        icon = {fastFoodOutline}
                     />
                     <FormSelect
                         name = "Preference"
