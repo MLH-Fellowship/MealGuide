@@ -26,9 +26,6 @@ const Meals = () => {
                 <h3 style={{ marginLeft: '5px', marginTop: '20px', position: 'relative'}}>{id.toUpperCase()}</h3></div>
                 <Highlight highlightsides='20px' height='6px' />
                 <MealTable id={id}/>
-                <MealTable id={id}/>
-                <MealTable id={id}/>
-                <MealTable id={id}/>
                 <FeedbackButtons />
             </IonContent>
         </IonPage>

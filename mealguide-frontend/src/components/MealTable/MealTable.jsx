@@ -7,8 +7,6 @@ import meals from '../../mealsdummy.json';
 
 const MealTable = ({ id }) => {
 
-    // console.log("Meals = ",...meals())
-
     let mealsOffered;
     if (id === 'breakfast') {
         console.log("breakfast = ", meals.breakfast)
@@ -43,9 +41,11 @@ const MealTable = ({ id }) => {
                 <tbody>
                     {
                         mealsOffered.map((user, i) => {
-                            // if (mealsOffered[i].mealTime === window.location.pathname.split('/meals/')[1]) {
+                        console.log("i = ", i)
+                        console.log("user = ", user)
+                            // if (mealsOffered[i].mealTime[0] === id) {
                             return (<>
-                                <tr>
+                                <tr key={mealsOffered[i]._id}>
                                     <td>{mealsOffered[i].name}</td>
                                     <td>{mealsOffered[i].nutrition.protein}</td>
                                     <td>{mealsOffered[i].nutrition.carb}</td>
