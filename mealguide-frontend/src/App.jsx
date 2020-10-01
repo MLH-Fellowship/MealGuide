@@ -6,6 +6,7 @@ import Profile from './pages/Profile';
 import Suggestions from './pages/Suggestions';
 import Meals from './pages/Meals';
 import Index from './pages/Index';
+import EditProfile from './pages/EditProfile';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,6 +34,7 @@ const App = ({id}) => (
         <Route path="/index" component={Index} exact={true} />
         <Route path="/profile" component={Profile} exact={true} />
         <Route path="/suggestions" component={Suggestions} exact={true} />
+        <Route path="/editProfile" component={EditProfile} exact={true} />
         <Route path='/meals/:id' component={Meals} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/index" />} />
         <Route component={() => <Redirect to='/index'/>}/>
