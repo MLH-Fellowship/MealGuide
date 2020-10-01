@@ -3,7 +3,7 @@ import React from 'react';
 import './Avatar.css';
 import { useHistory } from "react-router-dom";
 
-const Avatar = ({username}) => {
+const Avatar = ({username, imageURL}) => {
     const history = useHistory();
     const routeChange = () => {
         let path = `/editProfile`;
@@ -12,7 +12,7 @@ const Avatar = ({username}) => {
     return (
         <IonItem class="UserProfile">
             <IonAvatar slot="start" class="userProfileImage">
-                <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" alt="User Profile"/>
+                <img src={imageURL} alt="User Profile"/>
             </IonAvatar>
             <IonLabel>
                 <h2 class="userProfileName">{username}</h2>

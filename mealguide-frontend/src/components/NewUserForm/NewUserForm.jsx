@@ -9,8 +9,7 @@ import FormSelect from '../FormSelect/FormSelect';
 import { useHistory } from "react-router-dom";
 import { barbellOutline, bodyOutline, fastFoodOutline, restaurantOutline, bicycleOutline, bookOutline } from "ionicons/icons"
 import './NewUserForm.css'
-var url = new URL(window.location.href);
-const email = url.searchParams.get("email");
+
 function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
     const history = useHistory();
     const routeChange = () => {
@@ -26,29 +25,17 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
         }
         setValidated(true);
     };
-    function postSubmit () {
-        var url = new URL(window.location.href);
-        console.log(url.searchParams.get("email"))
-        var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://mealguide.herokuapp.com/api/user/addUser", true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(JSON.stringify({
-            email : email
-        }));
-
-        xhr.onload = function () {
-            var data = JSON.parse(this.responseText);
-            console.log(data);
-        }
-    }
+    const url = new URL(window.location.href);
+    const email = url.searchParams.get("email");
+    console.log(email)
     return (
+        
         <div className="page__section row align-items-center section__login " data-nav="Login" id="section__register">
             <div className="login__form col-md-6 offset-md-3">
                 <h5 className="section__heading display-3 text-center mb-5">
                     Getting to Know You!!
 				</h5>
-                <Form method='post' action="http://mealguide.herokuapp.com/api/user/addUser">
+                <Form method='post' id="newUser" name="newUserForm" action="https://mealguide.herokuapp.com/api/user/addUser">
                     <FormInput
                         name="Weight"
                         Value=""
@@ -69,20 +56,11 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         helpText="Use online converters to convert your height from ft to cm."
                         icon={bodyOutline}
                     />
-                    {/* <FormInput
-                        name="Meals"
-                        Value=""
-                        Type="number"
-                        placeHolder="How many meals do you eat per day?"
-                        validFeedback="Looks good!"
-                        invalideFeedback="Please enter a valid no."
-                        helpText="This will be used to suggest proper dishes in each meals."
-                        icon={fastFoodOutline}
-                    /> */}
+                    <Form.Control type="hidden" name="email" id="email" className="form-control check__validation" defaultValue={email} required />
                     <FormSelect
                         name="Preference"
-                        Value=""
-                        Options={["Non-Vegetarian", "Vegetarian", "Vegan", "Halal", "Kosher"]}
+
+                        Options={["No Preference" ,"Non-Vegetarian", "Vegetarian", "Vegan", "Halal", "Kosher"]}
                         validFeedback="Looks good!"
                         invalideFeedback="Please select a valid option."
                         helpText="Please let us know what are your dietary preference."
@@ -109,7 +87,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     <InputGroup className="form__buttons" style={{ display: "flex", flexDirection: "row", alignItems: "flex-end", justifyContent: "flex-end" }}>
                         <Button variant="outline-dark" onClick={routeChange} href='/index' style={{ paddingLeft: "10px", marginLeft: "10px", marginBottom: '10px' }}>Back</Button>
                         <Button variant="danger" type="reset" name="reset" id="reset" style={{ paddingLeft: "10px", marginLeft: "10px", marginBottom: '10px' }}>Reset</Button>
-                        <Button variant="success" type="submit" name="register" id="register" style={{ paddingLeft: "10px", marginLeft: "10px", marginBottom: '10px' }}>Submit</Button>
+                        <Button variant="success" type="submit" style={{ paddingLeft: "10px", marginLeft: "10px", marginBottom: '10px' }}>Submit</Button>
                     </InputGroup>
                 </Form>
             </div>
