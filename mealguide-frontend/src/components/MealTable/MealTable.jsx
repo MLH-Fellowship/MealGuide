@@ -5,11 +5,20 @@ import Highlight from '../Highlight/Highlight';
 import meals from '../../mealsdummy.json';
 // import './MealTable.css'
 
-const MealTable = ({id}) => {
-    const mealsOffered = []
-    mealsOffered.push(`meals.${id}`)
-    console.log(meals.breakfast)
+const MealTable = ({ id }) => {
+    const responseMeals = JSON.stringify(meals);
+    console.log("responseMeals = ", responseMeals)
+    const parsedData = JSON.parse(responseMeals);
+    console.log("parsedData = ", parsedData.breakfast)
+    console.log("data = ", parsedData.id)
+    const mealsOffered = parsedData.breakfast
     console.log(mealsOffered)
+    // const mealsOffered = []
+    // mealsOffered.push(`meals.${id}`)
+    // console.log("normal/actual = ", meals.breakfast)
+    // console.log("with variable = ", mealsOffered)
+    // console.log("id = ", id)
+    // console.log(typeof (`meals.${id}`))
     return !mealsOffered.length ?
         <h1>No Meals Found</h1> :
         (<>
@@ -27,23 +36,23 @@ const MealTable = ({id}) => {
                     {
                         mealsOffered.map((user, i) => {
                             // if (mealsOffered[i].mealTime === window.location.pathname.split('/meals/')[1]) {
-                                return (<>
-                                    <tr>
-                                        <td>{mealsOffered[i].name}</td>
-                                        <td>{mealsOffered[i].nutrition.protein}</td>
-                                        <td>{mealsOffered[i].nutrition.carb}</td>
-                                        <td>{mealsOffered[i].nutrition.fat}</td>
-                                        <td>{mealsOffered[i].weight}</td>
-                                    </tr>
-                                    <tr>
-                                        <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
-                                        <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
-                                        <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
-                                        <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
-                                        <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
-                                    </tr>
-                                </>
-                                )
+                            return (<>
+                                <tr>
+                                    <td>{mealsOffered[i].name}</td>
+                                    <td>{mealsOffered[i].nutrition.protein}</td>
+                                    <td>{mealsOffered[i].nutrition.carb}</td>
+                                    <td>{mealsOffered[i].nutrition.fat}</td>
+                                    <td>{mealsOffered[i].weight}</td>
+                                </tr>
+                                <tr>
+                                    <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
+                                    <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
+                                    <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
+                                    <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
+                                    <td style={{ padding: '0', margin: '0' }}><Highlight height='2px' /></td>
+                                </tr>
+                            </>
+                            )
                             // }
                         })
                     }
