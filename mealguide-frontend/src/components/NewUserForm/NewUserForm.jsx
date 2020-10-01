@@ -8,7 +8,6 @@ import FormSelect from '../FormSelect/FormSelect';
 import { useHistory } from "react-router-dom";
 import {barbellOutline, bodyOutline, fastFoodOutline, restaurantOutline, bicycleOutline, bookOutline} from "ionicons/icons"
 import './NewUserForm.css'
-import users from '../../usersdummy.json';
 
 function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
     const history = useHistory();
@@ -34,7 +33,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
 				<Form action="/suggestions">
 					<FormInput
                         name = "Weight" 
-                        Value={users.weight}
+                        Value=""
                         Type = "number"
                         placeHolder = "Please Enter your weight in kilograms."
                         validFeedback = "Looks good!"
@@ -44,7 +43,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     />
                     <FormInput
                         name = "Height"
-                        Value={users.height} 
+                        Value=""
                         Type = "number"
                         placeHolder = "Please enter your Height in cm."
                         validFeedback = "Looks good!"
@@ -54,7 +53,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     />
                     <FormInput
                         name = "Meals"
-                        Value={users.mealsPerDay}  
+                        Value=""
                         Type = "number"
                         placeHolder = "How many meals do you eat per day?"
                         validFeedback = "Looks good!"
@@ -64,7 +63,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     />
                     <FormSelect
                         name = "Preference" 
-                        Value = {users.preference}
+                        Value = ""
                         Options = {["Regular", "Vegetarian", "Vegan", "Halal", "Kosher"]} 
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please select a valid option."
@@ -73,7 +72,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     />
                     <FormSelect
                         name = "College" 
-                        Value={users.college}
+                        Value=""
                         Options = {["Harward University"]} 
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please select a valid option."
@@ -82,7 +81,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                     />
                     <FormSelect
                         name = "Goal"
-                        Value = {users.goal} 
+                        Value = ""
                         Options = {["Maintain Weight", "Gain Weight", "Lose Weight"]} 
                         validFeedback = "Looks good!"
                         invalideFeedback = "Please select a valid option."

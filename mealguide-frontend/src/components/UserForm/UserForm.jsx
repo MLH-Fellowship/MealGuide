@@ -28,7 +28,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
     return (
         <div class="page__section row align-items-center section__login " data-nav="Login" id="section__register">
 			<div class="login__form col-md-6 offset-md-3">
-				<Form>
+				<Form action="/profile">
                     <FormInput
                         name = "Name"
                         Value={users.firstname + " " + users.lastname}
