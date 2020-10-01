@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "tech.frontend.mealguide",
   "appName": "mealguide-frontend",
   "bundledWebRuntime": false,
   "npmClient": "npm",
