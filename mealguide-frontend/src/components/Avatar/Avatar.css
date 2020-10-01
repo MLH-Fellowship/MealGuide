@@ -9,3 +9,13 @@
 .userProfileLink{
     background-color: #f0face;
 }
+
+.editProfileLink{
+    text-decoration: none;
+    color: black;
+}
+
+.editProfileLink:hover{
+    text-decoration: none;
+    color: black;
+}
