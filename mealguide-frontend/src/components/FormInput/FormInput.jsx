@@ -7,15 +7,15 @@ import './FormInput.css'
 
 const FormInput = ({name, Type, placeHolder, validFeedback, invalideFeedback, helpText, Value, icon}) => {
     return (
-        <Form.Group id={"form__" + name} class="form-group" style={{marginTop:'20px'}}>
-            <Form.Label for={name} class="form__label sr-only sr-only-focusable">
+        <Form.Group id={"form__" + name} className="form-group" style={{marginTop:'20px'}}>
+            <Form.Label htmlFor={name} className="form__label sr-only sr-only-focusable">
                 {name}:
             </Form.Label>
             <InputGroup>
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1"><IonIcon icon={icon} /></span>
+                <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon1"><IonIcon icon={icon} /></span>
                 </div>
-                <Form.Control type={Type} name={name} id={name} placeholder={placeHolder} class="form-control check__validation" defaultValue={Value} required />
+                <Form.Control type={Type} name={name} id={name} placeholder={placeHolder} className="form-control check__validation" defaultValue={Value} required />
             </InputGroup>
             <Form.Control.Feedback type="valid">{validFeedback}</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">{invalideFeedback}</Form.Control.Feedback>

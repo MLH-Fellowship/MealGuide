@@ -7,13 +7,13 @@ import './FormSelect.css'
 
 const FormInput = ({name, Options, Value, validFeedback, invalideFeedback, helpText, icon}) => {
     return (
-        <Form.Group id={"form__" + name} class="form-group">
-            <Form.Label for={name} class="form__label sr-only sr-only-focusable">
+        <Form.Group id={"form__" + name} className="form-group">
+            <Form.Label for={name} className="form__label sr-only sr-only-focusable">
                 {name}:
             </Form.Label>
             <InputGroup>
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1"><IonIcon icon={icon} /></span>
+                <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon1"><IonIcon icon={icon} /></span>
                 </div>
                 <Form.Control as="select">
                 {Options.map(option => (
