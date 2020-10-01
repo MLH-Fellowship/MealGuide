@@ -39,6 +39,16 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         helpText = "Each person's name is really special."
                         icon = {personOutline}
                     />
+                    <FormInput
+                        name = "Email"
+                        Value={users.firstname + " " + users.lastname}
+                        Type = "text"
+                        placeHolder = "Please enter your full name."
+                        validFeedback = "Looks good!"
+                        invalideFeedback = "Please enter a valid name."
+                        helpText = "Each person's name is really special."
+                        icon = {personOutline}
+                    />
 					<FormInput
                         name = "Weight"
                         Value={users.weight}
@@ -118,7 +128,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
 					<InputGroup class="form__buttons" style={{ display: "flex", flexDirection: "row", alignItems: "flex-end", justifyContent: "flex-end"}}>
                         <Button variant="outline-dark"  onClick={routeChange} href='/profile' style={{paddingLeft:"10px", marginLeft:"10px", marginBottom:'10px'}}>Back</Button>
 						<Button variant="danger" type="reset" name="reset" id="reset" style={{paddingLeft:"10px",marginLeft:"10px", marginBottom:'10px'}}>Reset</Button>
-						<Button variant="success" type="submit" name="register" id="register" style={{paddingLeft:"10px",marginLeft:"10px", marginBottom:'10px'}}>Update</Button>
+						<Button variant="success" type="submit" style={{paddingLeft:"10px",marginLeft:"10px", marginBottom:'10px'}}>Update</Button>
 					</InputGroup>
 				</Form>
 			</div>

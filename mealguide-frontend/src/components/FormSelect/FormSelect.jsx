@@ -15,7 +15,7 @@ const FormInput = ({name, Options, Value, validFeedback, invalideFeedback, helpT
                 <div className="input-group-prepend">
                     <span className="input-group-text" id="basic-addon1"><IonIcon icon={icon} /></span>
                 </div>
-                <Form.Control as="select">
+                <Form.Control as="select" name={name} id={name}>
                 {Options.map(option => (
                     option == Value ? <option selected>{option}</option> : <option>{option}</option>
                 ))}
