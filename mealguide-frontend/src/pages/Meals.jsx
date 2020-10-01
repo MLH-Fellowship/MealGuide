@@ -3,6 +3,7 @@ import { IonContent, IonPage, IonButton, IonIcon } from '@ionic/react';
 import {chevronBackOutline} from 'ionicons/icons';
 import LargeNavbar from '../components/Navbar/LargeNavbar';
 import Highlight from '../components/Highlight/Highlight';
+import FeedbackButtons from '../components/FeedbackButtons/FeedbackButtons';
 import MealTable from '../components/MealTable/MealTable';
 import meals from '../mealsdummy.json';
 import { useHistory } from "react-router-dom";
@@ -24,6 +25,7 @@ const Meals = () => {
                 <h3 style={{ marginLeft: '5px', marginTop: '20px', position: 'relative'}}>{window.location.pathname.split('/meals/')[1]}</h3></div>
                 <Highlight highlightsides='20px' height='6px' />
                 <MealTable mealsOffered={meals.mealsOffered}/>
+                <FeedbackButtons />
             </IonContent>
         </IonPage>
     )
