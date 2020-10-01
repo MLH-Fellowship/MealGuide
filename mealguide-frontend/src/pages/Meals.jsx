@@ -5,8 +5,8 @@ import LargeNavbar from '../components/Navbar/LargeNavbar';
 import Highlight from '../components/Highlight/Highlight';
 import FeedbackButtons from '../components/FeedbackButtons/FeedbackButtons';
 import MealTable from '../components/MealTable/MealTable';
-import meals from '../mealsdummy.json';
 import { useHistory } from "react-router-dom";
+
 
 const Meals = () => {
     const history = useHistory();
@@ -14,6 +14,7 @@ const Meals = () => {
         let path = `/suggestions`;
         history.push(path);
     }
+    const id = window.location.pathname.split('/meals/')[1]
     return (
         <IonPage>
             <IonContent fullscreen>
@@ -22,9 +23,9 @@ const Meals = () => {
                 <IonButton fill='clear' href='/suggestions' style={{position: 'relative', margin:'15px 0 10px 20px'}} onClick={routeChange}>
                     <IonIcon color='dark' icon={chevronBackOutline} />
                 </IonButton>
-                <h3 style={{ marginLeft: '5px', marginTop: '20px', position: 'relative'}}>{window.location.pathname.split('/meals/')[1]}</h3></div>
+                <h3 style={{ marginLeft: '5px', marginTop: '20px', position: 'relative'}}>{id.toUpperCase()}</h3></div>
                 <Highlight highlightsides='20px' height='6px' />
-                <MealTable mealsOffered={meals.mealsOffered}/>
+                <MealTable id={id}/>
                 <FeedbackButtons />
             </IonContent>
         </IonPage>
