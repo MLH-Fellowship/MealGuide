@@ -2,9 +2,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table'
 import Highlight from '../Highlight/Highlight';
+import meals from '../../mealsdummy.json';
 // import './MealTable.css'
 
-const MealTable = ({ mealsOffered }) => {
+const MealTable = ({id}) => {
+    const mealsOffered = []
+    mealsOffered.push(`meals.${id}`)
+    console.log(meals.breakfast)
+    console.log(mealsOffered)
     return !mealsOffered.length ?
         <h1>No Meals Found</h1> :
         (<>
@@ -21,7 +26,7 @@ const MealTable = ({ mealsOffered }) => {
                 <tbody>
                     {
                         mealsOffered.map((user, i) => {
-                            if (mealsOffered[i].mealTime === window.location.pathname.split('/meals/')[1]) {
+                            // if (mealsOffered[i].mealTime === window.location.pathname.split('/meals/')[1]) {
                                 return (<>
                                     <tr>
                                         <td>{mealsOffered[i].name}</td>
@@ -39,7 +44,7 @@ const MealTable = ({ mealsOffered }) => {
                                     </tr>
                                 </>
                                 )
-                            }
+                            // }
                         })
                     }
                 </tbody>
