@@ -10,7 +10,8 @@ const Profile = () => {
     return (
         <IonPage>
             <IonContent fullscreen>
-                <LargeNavbar />
+                {/* user should not be able to navigate without filling details so removed navbar */}
+                {/* <LargeNavbar /> */}
                 <NewUserForm />
             </IonContent>
         </IonPage>
