@@ -6,19 +6,27 @@ import meals from '../../mealsdummy.json';
 // import './MealTable.css'
 
 const MealTable = ({ id }) => {
-    const responseMeals = JSON.stringify(meals);
-    console.log("responseMeals = ", responseMeals)
-    const parsedData = JSON.parse(responseMeals);
-    console.log("parsedData = ", parsedData.breakfast)
-    console.log("data = ", parsedData.id)
-    const mealsOffered = parsedData.breakfast
-    console.log(mealsOffered)
-    // const mealsOffered = []
-    // mealsOffered.push(`meals.${id}`)
-    // console.log("normal/actual = ", meals.breakfast)
-    // console.log("with variable = ", mealsOffered)
-    // console.log("id = ", id)
-    // console.log(typeof (`meals.${id}`))
+
+    // console.log("Meals = ",...meals())
+
+    let mealsOffered;
+    if (id === 'breakfast') {
+        console.log("breakfast = ", meals.breakfast)
+        mealsOffered = meals.breakfast
+    }
+    else if (id === 'lunch') {
+        console.log("lunch = ", meals.lunch)
+        mealsOffered = meals.lunch
+    }
+
+    else if (id === "snacks") {
+        console.log("snacks = ", meals.snacks)
+        mealsOffered = meals.snacks
+    }
+    else if (id === 'dinner') {
+        console.log("dinner = ", meals.dinner)
+        mealsOffered = meals.dinner
+    }
     return !mealsOffered.length ?
         <h1>No Meals Found</h1> :
         (<>
