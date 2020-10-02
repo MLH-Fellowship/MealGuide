@@ -33,11 +33,13 @@ var mealSchema = new mongoose.Schema({
         },
         //Can add more nutrients in AddOns
     },
-    type: {
-        //Veg or Non Veg or Any
-        type: String,
-        required: true
-    },
+    type: [
+        {
+            //Veg or Non Veg or Any
+            type: String,
+            required: true
+        }
+    ],
     mealTime: [
         //Breakfast, Lunch, Snack or Dinner
         {type: String}

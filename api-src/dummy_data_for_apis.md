@@ -345,50 +345,101 @@
 
 ~~~
 {
-    "breakfast": {
-        "nutrition": {
-            "carb": 0,
-            "protein": 12,
-            "fat": 8
+    "breakfast": [
+            {
+            "nutrition": {
+                "carb": 0,
+                "protein": 12,
+                "fat": 8
+            },
+            "mealTime": [
+                "Breakfast"
+            ],
+            "_id": "5f718e772675cc21d02c8092",
+            "name": "Hard Boiled Eggs",
+            "cost": 10,
+            "weight": 50,
+            "type": "Non Veg"
         },
-        "mealTime": [
-            "Breakfast"
-        ],
-        "_id": "5f718e772675cc21d02c8092",
-        "name": "Hard Boiled Eggs",
-        "cost": 10,
-        "weight": 50,
-        "type": "Non Veg"
-    },
-    "lunch": {
-        "nutrition": {
-            "carb": 0,
-            "protein": 21.2,
-            "fat": 3.3
+        {
+            "nutrition": {
+                "carb": 0,
+                "protein": 12,
+                "fat": 8
+            },
+            "mealTime": [
+                "Breakfast"
+            ],
+            "_id": "5f718e772675cc21d02c8092",
+            "name": "Hard Boiled Eggs",
+            "cost": 10,
+            "weight": 50,
+            "type": "Non Veg"
         },
-        "mealTime": [
-            "Lunch"
-        ],
-        "_id": "5f718e772675cc21d02c8096",
-        "name": "Grilled Chicken",
-        "cost": 20,
-        "weight": 140,
-        "type": "Non Veg"
-    },
-    "dinner": {
-        "nutrition": {
-            "carb": 16,
-            "protein": 8,
-            "fat": 3
+    ],
+    "lunch": [
+        {
+            "nutrition": {
+                "carb": 0,
+                "protein": 21.2,
+                "fat": 3.3
+            },
+            "mealTime": [
+                "Lunch"
+            ],
+            "_id": "5f718e772675cc21d02c8096",
+            "name": "Grilled Chicken",
+            "cost": 20,
+            "weight": 140,
+            "type": "Non Veg"
         },
-        "mealTime": [
-            "Dinner"
-        ],
-        "_id": "5f718e772675cc21d02c8099",
-        "name": "Clam Chowder",
-        "cost": 20,
-        "weight": 225,
-        "type": "Non Veg"
-    }
+        {
+            "nutrition": {
+                "carb": 0,
+                "protein": 21.2,
+                "fat": 3.3
+            },
+            "mealTime": [
+                "Lunch"
+            ],
+            "_id": "5f718e772675cc21d02c8096",
+            "name": "Grilled Chicken",
+            "cost": 20,
+            "weight": 140,
+            "type": "Non Veg"
+        }
+    ],
+    "dinner": [
+        {
+            "nutrition": {
+                "carb": 16,
+                "protein": 8,
+                "fat": 3
+            },
+            "mealTime": [
+                "Dinner"
+            ],
+            "_id": "5f718e772675cc21d02c8099",
+            "name": "Clam Chowder",
+            "cost": 20,
+            "weight": 225,
+            "type": "Non Veg"
+        },
+        {
+            "nutrition": {
+                "carb": 16,
+                "protein": 8,
+                "fat": 3
+            },
+            "mealTime": [
+                "Dinner"
+            ],
+            "_id": "5f718e772675cc21d02c8099",
+            "name": "Clam Chowder",
+            "cost": 20,
+            "weight": 225,
+            "type": "Non Veg"
+        }
+    ]
 }
 ~~~
