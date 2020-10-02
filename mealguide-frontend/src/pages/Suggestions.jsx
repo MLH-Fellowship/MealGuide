@@ -1,11 +1,11 @@
 import React from 'react';
 import { IonContent, IonPage } from '@ionic/react';
+// import SmallNavbar from '../components/Navbar/SmallNavbar';
 import LargeNavbar from '../components/Navbar/LargeNavbar';
 import AccordionCard from '../components/AccordionCard/AccordionCard';
-import saveLocal from '../helpers/saveLocal';
+import Accordion from 'react-bootstrap/esm/Accordion';
+
 const Suggestions = () => {
-    saveLocal("ridham.bhat@gmail.com","https://mealguide.herokuapp.com/api/user/getUser ","users");
-    saveLocal("ridham.bhat@gmail.com","https://mealguide.herokuapp.com/api/user/getRecommendations ","recomendations");
     return (
         <IonPage>
             {/* <SmallNavbar /> */}
