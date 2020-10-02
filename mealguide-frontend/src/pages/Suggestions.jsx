@@ -6,8 +6,10 @@ import saveLocal from '../helpers/saveLocal';
 const url = new URL(window.location.href);
 const email = url.searchParams.get("email");
 const Suggestions = () => {
-    saveLocal(email,"https://mealguide.herokuapp.com/api/user/getUser ","users");
-    saveLocal(email,"https://mealguide.herokuapp.com/api/user/getRecommendations ","recomendations");
+    if (email !== null){
+        saveLocal(email,"https://mealguide.herokuapp.com/api/user/getUser ","users");
+        saveLocal(email,"https://mealguide.herokuapp.com/api/user/getRecommendations ","recomendations");
+    }
     return (
         <IonPage>
             {/* <SmallNavbar /> */}
