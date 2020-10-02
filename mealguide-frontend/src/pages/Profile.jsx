@@ -20,7 +20,7 @@ const Profile = () => {
             {/* <SmallNavbar /> */}
             <IonContent fullscreen>
                 <LargeNavbar />
-                <Avatar username={users.firstname + " " + users.lastname} imageURL={users.imageURL}/>
+                <Avatar username={users.firstname + " " + users.lastname} imageURL={users.profilepicture}/>
                 <UserFact FactLabel="Points" FactValue={users.points + " meals followed till date"}/>
                 <Highlight highlightsides='20px' highlighttop='0' height='6px'/>
                 <UserFacts FactLableOne="Weight" FactValueOne={users.weight} FactLableTwo="Height" FactValueTwo={users.height} FactLableThree="BMI" FactValueThree={calWeight(users.weight, users.height)} />
