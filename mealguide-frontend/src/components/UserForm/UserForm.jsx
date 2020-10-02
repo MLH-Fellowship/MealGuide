@@ -39,6 +39,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         helpText = "Each person's name is really special."
                         icon = {personOutline}
                     />
+					<Form.Control type="hidden" name="email" id="email" className="form-control check__validation" defaultValue={email} required />
                     <FormInput
                         name = "Email"
                         Value={users.firstname + " " + users.lastname}
@@ -49,7 +50,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         helpText = "Each person's name is really special."
                         icon = {personOutline}
                     />
-					<FormInput
+		    <FormInput
                         name = "Weight"
                         Value={users.weight}
                         Type = "number"
