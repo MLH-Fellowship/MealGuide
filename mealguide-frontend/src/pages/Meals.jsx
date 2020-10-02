@@ -12,7 +12,7 @@ const Meals = () => {
     const history = useHistory();
     const routeChange = () => {
         let path = `/suggestions`;
-        history.push(path);
+        history.back(path);
     }
     const id = window.location.pathname.split('/meals/')[1]
     return (
