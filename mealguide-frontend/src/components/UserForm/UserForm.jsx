@@ -30,7 +30,7 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
     return (
         <div class="page__section row align-items-center section__login " data-nav="Login" id="section__register">
 			<div class="login__form col-md-6 offset-md-3">
-				<Form name="editProfileForm" method="post" action="https://mealguide.herokuapp.com/api/user/addUser">
+				<Form name="editProfileForm" method="post" action="https://mealguide.herokuapp.com/api/user/updateUser">
                     <FormInput
                         name = "Name"
                         Value={users.firstname + " " + users.lastname}
