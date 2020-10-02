@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonButton, IonHeader, IonIcon, IonImg, IonTitle, IonToolbar } from '@ionic/react';
-import { personSharp, readerOutline } from 'ionicons/icons'
+import { exitOutline, personSharp, readerOutline } from 'ionicons/icons'
 import { useHistory } from "react-router-dom";
 import logo from '../../assets/logo.svg';
 import './Navbar.css';
@@ -13,6 +13,10 @@ const Navbar = () => {
     }
     const routeChange2 = () => {
         let path = `/suggestions`;
+        history.push(path);
+    }
+    const routeChange3 = () => {
+        let path = `/index`;
         history.push(path);
     }
     return (
@@ -28,6 +32,9 @@ const Navbar = () => {
                 </IonButton>
                 <IonButton fill='clear' slot='end' className='navbutton' onClick={routeChange2}>
                     <IonIcon color='dark' icon={readerOutline} />
+                </IonButton>
+                <IonButton fill='clear' slot='end' className='navbutton' onClick={routeChange3}>
+                    <IonIcon color='dark' icon={exitOutline} />
                 </IonButton>
             </IonToolbar>
         </IonHeader>
