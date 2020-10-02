@@ -17,8 +17,6 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
         history.push(path);
     }
     const [validated, setValidated] = useState(false);
-    const url = new URL(window.location.href);
-    const email = url.searchParams.get("email");
     const handleSubmit = (event) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
