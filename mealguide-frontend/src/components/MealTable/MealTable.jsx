@@ -2,11 +2,12 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table'
 import Highlight from '../Highlight/Highlight';
-import meals from '../../mealsdummy.json';
+// import meals from '../../mealsdummy.json';
 // import './MealTable.css'
 
 const MealTable = ({ id }) => {
-
+    const meals = JSON.parse(localStorage.getItem('recomendations')) || []
+    console.log("MEALS = ",  meals)
     let mealsOffered;
     if (id === 'breakfast') {
         console.log("breakfast = ", meals.breakfast)
@@ -26,7 +27,7 @@ const MealTable = ({ id }) => {
         mealsOffered = meals.dinner
     }
     return !mealsOffered.length ?
-        <h1>No Meals Found</h1> :
+        <h1 style={{textAlign: "center"}}>No Meals Found</h1> :
         (<>
             <Table responsive hover borderless style={{ marginLeft: '20px' }}>
                 <thead>

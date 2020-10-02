@@ -10,6 +10,8 @@ function AccordionCard({ title, subtitle, body, eventKey, colour, mealTime, id }
     const history = useHistory();
     const routeChange = () => {
         let path = `/meals/${id}`;
+        console.log("ID = ", id)
+        console.log("path = ", path)
         history.push(path);
     }
     return (
