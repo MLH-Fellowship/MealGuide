@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+//import files and libraries
 const cheerio = require('cheerio');
 const fs = require("fs")
 const mongoose = require("mongoose");
@@ -12,11 +13,17 @@ const passport = require('passport');
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
+
+//getting the route ready
 const userRoutes = require('./routes/userRoute');
 const collegeRoutes = require('./routes/collegeRoute');
 const recommendationRoute = require('./routes/recommendationRoute');
 const authRoute = require('./routes/authRoute');
+const tempUserRoute = require('./routes/tempUserRoute');
 
 
 //middlewares
@@ -52,6 +59,13 @@ app.use('/api',userRoutes);
 app.use('/api',collegeRoutes);
 app.use('/api',recommendationRoute);
 app.use('/api', authRoute);
+app.use('/api',tempUserRoute);
+
+//test
+app.post('/test', (req,res)=>{
+    console.log(req.body);
+    return res.json(req.body);
+});
 
 //app start
 app.listen(port, () => {

@@ -29,6 +29,11 @@ var userSchema = new mongoose.Schema({
             return _t.firstname +" "+ _t.lastname;
         }
     },
+    profilepicture: {
+        type: String,
+        required: true,
+        trim: true
+    },
     points: {
         type: Number,
         required: false,
