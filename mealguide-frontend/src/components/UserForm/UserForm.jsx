@@ -42,16 +42,6 @@ function UserForm({ title, subtitle, body, eventKey, colour, mealTime, id }) {
                         icon = {personOutline}
                     />
 					<Form.Control type="hidden" name="email" id="email" className="form-control check__validation" defaultValue={email} required />
-                    <FormInput
-                        name = "Email"
-                        Value={users.firstname + " " + users.lastname}
-                        Type = "text"
-                        placeHolder = "Please enter your full name."
-                        validFeedback = "Looks good!"
-                        invalideFeedback = "Please enter a valid name."
-                        helpText = "Each person's name is really special."
-                        icon = {personOutline}
-                    />
 		    <FormInput
                         name = "Weight"
                         Value={users.weight}
